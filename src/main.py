@@ -3,7 +3,7 @@ import os
 
 df = pd.DataFrame(columns=['time', 'state', 'message'])
 
-path = "path/to/csv/folder"
+path = "E:/Programmeren/Tarball analyse/csv"
 
 #merge all csv files into one
 for file in os.listdir(path):
@@ -12,3 +12,4 @@ for file in os.listdir(path):
     df = pd.concat([df, new_df], ignore_index=True)
 
 print(df)
+df.to_csv("E:/Programmeren/Tarball analyse/merged.csv")
